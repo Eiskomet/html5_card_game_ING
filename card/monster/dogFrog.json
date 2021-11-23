@@ -1,0 +1,10 @@
+
+{
+    "id":"DogFrog",
+    "name":"狗蛙",
+    "cost":4,
+    "def_atk":2,
+    "def_hp":6,
+    "img_path":"img/Dog-Frog.jpg"
+}
+

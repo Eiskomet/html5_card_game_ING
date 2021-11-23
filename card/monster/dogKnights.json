@@ -1,0 +1,10 @@
+
+{
+    "id":"DogKnights",
+    "name":"狗骑士",
+    "cost":3,
+    "def_atk":2,
+    "def_hp":4,
+    "img_path":"img/Dog-Knights.png"
+}
+

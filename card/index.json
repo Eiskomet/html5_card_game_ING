@@ -1,0 +1,7 @@
+
+{
+    "Dog":"card/monster/dog.json",
+    "DogKnights":"card/monster/dogKnights.json",
+    "JumpDog":"card/monster/jumpDog.json",
+    "DogFrog":"card/monster/dogFrog.json"
+}

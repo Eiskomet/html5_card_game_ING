@@ -1,0 +1,10 @@
+
+{
+    "id":"Dog",
+    "name":"狗",
+    "cost":1,
+    "def_atk":1,
+    "def_hp":2,
+    "img_path":"img/Dog.jpg"
+}
+

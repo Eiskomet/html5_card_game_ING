@@ -1,0 +1,9 @@
+{
+    "id":"JumpDog",
+    "name":"跳跳狗",
+    "cost":2,
+    "def_atk":2,
+    "def_hp":1,
+    "img_path":"img/Jump-Dog.gif"
+}
+
