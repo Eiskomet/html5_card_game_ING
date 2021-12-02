@@ -1,7 +1,1 @@
-
-{
-    "Dog":"card/monster/dog.json",
-    "DogKnights":"card/monster/dogKnights.json",
-    "JumpDog":"card/monster/jumpDog.json",
-    "DogFrog":"card/monster/dogFrog.json"
-}
+{"HappyDog":"./card/happyDog/HappyDog.json","SuperHappyDog":"./card/happyDog/SuperHappyDog.json","TwistedHappyDog":"./card/happyDog/TwistedHappyDog.json","AbstractDog":"./card/monster/AbstractDog.json","CruelDog":"./card/monster/CruelDog.json","Dog":"./card/monster/Dog.json","DogFrog":"./card/monster/DogFrog.json","DogKnights":"./card/monster/DogKnights.json","DogMauler":"./card/monster/DogMauler.json","DogwallTheNorthernKing":"./card/monster/DogwallTheNorthernKing.json","JumpDog":"./card/monster/JumpDog.json","MadDog":"./card/monster/MadDog.json","StealthDog":"./card/monster/StealthDog.json","Test":"./card/monster/Test.json","TobyFox":"./card/monster/TobyFox.json"}

@@ -1,0 +1,22 @@
+{
+    "id": "SuperHappyDog",
+    "name": "超快乐狗",
+    "cost": "3",
+    "def_atk": "3",
+    "def_hp": "2",
+    "img_path": "img/SuperHappyDog.jpg",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "它是一只超快乐的狗！",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

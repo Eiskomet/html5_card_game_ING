@@ -1,0 +1,22 @@
+{
+    "id": "DogMauler",
+    "name": "狗盾兵",
+    "cost": "0",
+    "def_atk": "2",
+    "def_hp": "4",
+    "img_path": "img/DogMauler.jpg",
+    "type": "",
+    "rarity": "传说",
+    "text": "",
+    "particular": "狗沃直属道格盾兵",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": true,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

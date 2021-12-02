@@ -1,0 +1,22 @@
+{
+    "id": "TobyFox",
+    "name": "Toby",
+    "cost": "0",
+    "def_atk": "1",
+    "def_hp": "3",
+    "img_path": "img/TobyFox.jpg",
+    "type": "狗",
+    "rarity": "传说",
+    "text": "",
+    "particular": "",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () {let a=new aidio(\"audio/Toby Fox - Undertale.mp3\");a.play();}",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

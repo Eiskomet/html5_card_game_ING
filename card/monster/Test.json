@@ -1,0 +1,22 @@
+{
+    "id": "Test",
+    "name": "test",
+    "cost": "0",
+    "def_atk": "1",
+    "def_hp": "1",
+    "img_path": "",
+    "type": "",
+    "rarity": "传说",
+    "text": "测试用卡",
+    "particular": "用来测试卡牌系统的卡牌",
+    "is_die": false,
+    "is_leap_atk": true,
+    "is_guard": true,
+    "is_unatk": false,
+    "is_stealth": true,
+    "useEffect": "function(){\nconsole.log(\"使用测试卡\")\n}",
+    "atkEffect": "function(){\nconsole.log(\"测试卡攻击\")\n}",
+    "roundEndEffect": "function(){\nconsole.log(\"测试卡回合结束\")\n}",
+    "roundStartEffect": "function(){\nconsole.log(\"测试卡回合开始\")\n}",
+    "deathEffect": "function(){\nconsole.log(\"测试卡死亡\")\n}"
+}

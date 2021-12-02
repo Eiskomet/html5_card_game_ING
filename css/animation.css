@@ -1,0 +1,90 @@
+@keyframes fd-card-attack{ 
+
+    1%{
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+    }
+    30%{
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(120%);
+    }
+    50%{
+        top: 20px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(115%);
+    }
+    60%{
+        top: -180px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(110%);
+    }
+
+    80%{
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(120%);
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+    }
+
+}
+
+@keyframes en-card-attack{ 
+    1%{
+        bottom: 0px;
+        left: 0px;
+        z-index: 3;
+        
+    }
+    30%{
+        bottom: 0px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(120%);
+    }
+    50%{
+        bottom: 20px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(115%);
+    }
+    60%{
+        bottom: -180px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(110%);
+    }
+
+    80%{
+        bottom: 0px;
+        left: 0px;
+        z-index: 3;
+        transform: scale(120%);
+    }
+    100%{
+        bottom: 0px;
+        left: 0px;
+    }
+
+}
+
+
+#fd-pos .card{
+    animation-name: fd-card-attack;
+    animation-duration: 1.25s;
+    animation-play-state: paused;
+}
+
+#en-pos .card{
+    animation-name: en-card-attack;
+    animation-duration: 1.25s;
+    animation-play-state: paused;
+}

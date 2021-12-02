@@ -1,0 +1,22 @@
+{
+    "id": "DogwallTheNorthernKing",
+    "name": "北岭之王.狗沃",
+    "cost": "6",
+    "def_atk": "2",
+    "def_hp": "5",
+    "img_path": "img/DogwallTheNorthernKing.jpg",
+    "type": "狗",
+    "rarity": "传说",
+    "text": "",
+    "particular": "镇守道格王国北边的狗藩王",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": true,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function(fd_character, fds, en_character, ens){\n  play.hands.push(createCrad(card_data[\"DogMauler\"]))\n}",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function(fd_character, fds, en_character, ens){\n  play.hands.push(createCrad(card_data[\"DogMauler\"]))\n}"
+}

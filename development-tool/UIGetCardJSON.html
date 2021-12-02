@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>卡牌制作</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        input {
+            display: flex;
+            width: 200px;
+            height: 20px;
+            margin: 10px;
+        }
+
+        body {
+            display: flex;
+        }
+
+        h2 {
+            margin: 10px;
+        }
+
+        #table {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #main {
+            width: 50%;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            flex-direction: column;
+        }
+
+        #rarity {
+            width: 136px;
+
+
+        }
+
+        textarea {
+            display: block;
+            margin: 10px;
+            width: 200px;
+        }
+
+        #particular {
+            height: 50px;
+        }
+
+        input.radio {
+            display: inline;
+            width: auto;
+            height: auto;
+            margin: 0px;
+        }
+
+        div.radio {
+
+            margin: 10px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        .code {
+            height: 100px;
+            width: 400px;
+        }
+
+        .button {
+            display: block;
+            width: 100px;
+            height: auto;
+            text-align: center;
+            padding: 3px;
+        }
+
+        div.show {
+            width: 400px;
+            height: auto;
+
+            display: flex;
+
+
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #show {
+            display: block;
+            width: 400px;
+            height: 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="main">
+        <h2>卡牌制作</h2>
+        <form name="table" id="table">
+            <input id="id" name="id" type="text" placeholder="卡牌id">
+            <input id="name" name="name" type="text" placeholder="卡牌名">
+            <input id="cost" name="cost" type="text" placeholder="费用">
+            <input id="def_atk" name="def_atk" type="text" placeholder="攻击力">
+            <input id="def_hp" name="def_hp" type="text" placeholder="血量">
+            <input id="type" name="type" type="text" placeholder="卡牌种类">
+            <div>
+                稀有度：
+                <select id="rarity" name="rarity">
+                    <option selected="selected">普通</option>
+                    <option>稀有</option>
+                    <option>史诗</option>
+                    <option>传说</option>
+                </select>
+            </div>
+
+            <textarea id="text" name="text" maxlength="24" placeholder="卡牌信息"></textarea>
+            <textarea id="particular" name="particular" maxlength="100" placeholder="卡牌详细信息"></textarea>
+
+            <div class="radio">
+                是否飞跃攻击：
+                <input id="is_leap_atk-yes" class="radio" name="is_leap_atk" type="radio" value=true>
+                <label for="is_leap_atk-yes">是</label>
+                <input id="is_leap_atk-no" class="radio" name="is_leap_atk" type="radio" value=false>
+                <label for="is_leap_atk-no">否</label>
+            </div>
+
+            <div class="radio">
+                是否守护：
+                <input id="is_guard-yes" class="radio" name="is_guard" type="radio" value=true>
+                <label for="is_guard-yes">是</label>
+                <input id="is_guard-no" class="radio" name="is_guard" type="radio" value=false>
+                <label for="is_guard-no">否</label>
+            </div>
+
+            <div class="radio">
+                是否潜行：
+                <input id="is_stealth-yes" class="radio" name="is_stealth" type="radio" value=true>
+                <label for="is_stealth-yes">是</label>
+                <input id="is_stealth-no" class="radio" name="is_stealth" type="radio" value=false>
+                <label for="is_stealth-no">否</label>
+            </div>
+
+            <div class="radio">
+                是否无法攻击：
+                <input id="s_unatk-yes" class="radio" name="is_unatk" type="radio" value=true>
+                <label for="s_unatk-yes">是</label>
+                <input id="s_unatk-no" class="radio" name="is_unatk" type="radio" value=false>
+                <label for="s_unatk-no">否</label>
+            </div>
+            <textarea id="useEffect" name="useEffect" class="code"
+                placeholder="卡牌使用效果:&#10;function(){&#10;&#10;}"></textarea>
+            <textarea id="atkEffect" name="atkEffect" class="code"
+                placeholder="卡牌攻击效果:&#10;function(){&#10;&#10;}"></textarea>
+            <textarea id="roundStartEffect" name="roundStartEffect" class="code"
+                placeholder="卡牌回合开始效果:&#10;function(){&#10;&#10;}"></textarea>
+            <textarea id="roundEndEffect" name="roundEndEffect" class="code"
+                placeholder="卡牌回合结束效果:&#10;function(){&#10;&#10;}"></textarea>
+            <textarea id="deathEffect" name="deathEffect" class="code"
+                placeholder="卡牌死亡效果:&#10;function(){&#10;&#10;}"></textarea>
+            <input type="button" class="button" onclick="printJSON()" value="生成">
+
+
+    </div>
+    </div>
+
+    <div>
+        <h2>规范说明：</h2>
+        <div>
+            卡牌id采用大驼峰命名法，即单词间直接相连，每一个单词的首字母大写
+            如：HelloWorld,RedDog。<br>
+            图片应与id同名，默认使用jpg为后缀<br><br>
+            卡牌使用效果使用如下为模板<br>
+            function(<四个可选参数>){<br>//代码实现<br>}<br>
+                第一个参数为友方角色，第二个参数为友方卡牌列表<br>
+                第三个参数为敌方角色，第四个参数为敌方卡牌列表
+        </div>
+        <h2>JSON代码：</h2>
+        <div class="show">
+            <textarea id="show"></textarea>
+        </div>
+        <input id="dl" type="submit" class="button" disabled="true" onclick="download_JSON()" value="下载json文件">
+    </div>
+
+    <script>
+        function printJSON() {
+
+
+            var monster = {
+                "id": "",                    //卡牌id
+                "name": "",                  //卡牌名
+                "cost": 1,                   //费用
+                "def_atk": 1,                //攻击力
+                "def_hp": 1,                 //血量
+                "img_path": "",              //图片路径
+                "type": "",                  //卡牌种类
+                "rarity": "普通",             //卡牌稀有度
+                "text": "",                   //卡牌信息
+                "particular": "",                //详细信息  
+                "is_die": false,                //是否死亡
+                "is_leap_atk": false,           //是否飞跃攻击
+                "is_guard": false,              //是否守护
+                "is_unatk": false,             //是否无法攻击
+                "is_stealth": false,            //是否潜行
+                "useEffect": function () { },
+                "atkEffect": function () { },
+                "roundEndEffect": function () { },
+                "roundStartEffect": function () { },
+                "deathEffect": function () { }
+            }
+            //函数可赋参数，第一个参数为友方角色，第二个参数为友方卡牌列表
+            //第三个参数为敌方角色，第四个参数为敌方卡牌列表
+
+            /*卡牌额外属性
+            limit_hp;       血量上限
+            place;          卡牌位置，-1为手牌，
+                            [0,room_size)为玩家卡槽
+                            [room_size,2*room_size)为敌人卡槽
+                            (该属性为只读,单独修改并不能改变卡牌的实际位置,
+                            想修改位置，修改参数中列表)
+            */
+
+            /*角色属性
+            limit_hp;       血量上限
+            hp;             当前血量
+            limit_coin;     费用上限
+            coin;           当前费用
+            library;        牌库
+            deck;           当前牌库
+            hands;          手牌
+     
+            角色方法
+            drawCard()      抽卡
+            growth()        法力值成长
+            */
+
+            //怪物卡牌都有如上属性
+            //全局回合数为round_number
+            //卡槽数room_size
+            //所有卡牌数据card_data
+
+            //console.log(table.text.value);
+            for (let i in monster) {
+                // console.log(table[i]);
+                if (table[i] != undefined && table[i].value != undefined && table[i].value != "") {
+                    monster[i] = table[i].value;
+                    if(i.indexOf('is_')==0){
+                        monster[i]=monster[i]=="true";
+                    }
+
+                }
+            }
+            monster.img_path = "img/" + monster.id + ".jpg";
+            var str = JSON.stringify(monster, (key, val) => {
+                if (typeof val == "function") {
+                    return val.toString();
+                }
+                else {
+                    return val;
+                }
+            })
+            document.getElementById("show").innerHTML = str;
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+
+            document.getElementById("dl").disabled=false;
+
+
+            // var obj = JSON.parse(str, (key, val) => {
+            //     if ("string" == typeof val && val.indexOf('function') == 0) {
+            //         return Function('return ' + val)();
+            //     }
+            //     else {
+            //         return val;
+            //     }
+            // });
+            // console.log(obj);
+            // console.log(obj.useEffect());
+        }
+
+
+
+    </script>
+    <script>
+        function download_JSON() {
+            let content = document.getElementById("show").innerHTML;
+            
+            let filename = table.id.value+".json";
+            if(table.id.value==undefined||table.id.value==""){
+                filename="null.json";
+            }
+            let contentType = 'application/octet-stream';
+            var a = document.createElement('a');
+            var blob = new Blob([content], { 'type': contentType });
+            a.href = window.URL.createObjectURL(blob);
+            a.download = filename;
+            a.click();
+        }
+    </script>
+</body>
+
+</html>

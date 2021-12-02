@@ -1,10 +1,22 @@
-
 {
-    "id":"DogKnights",
-    "name":"狗骑士",
-    "cost":3,
-    "def_atk":2,
-    "def_hp":4,
-    "img_path":"img/Dog-Knights.png"
+    "id": "DogKnights",
+    "name": "狗骑士",
+    "cost": "3",
+    "def_atk": "2",
+    "def_hp": "4",
+    "img_path": "img/DogKnights.png",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
 }
-

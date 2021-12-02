@@ -1,0 +1,22 @@
+{
+    "id": "StealthDog",
+    "name": "狗狗祟祟",
+    "cost": "3",
+    "def_atk": "2",
+    "def_hp": "1",
+    "img_path": "img/StealthDog.jpg",
+    "type": "狗",
+    "rarity": "稀有",
+    "text": "",
+    "particular": "偷偷摸摸的狗，隐藏在暗处，没有卡牌能直接攻击到它。",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": true,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

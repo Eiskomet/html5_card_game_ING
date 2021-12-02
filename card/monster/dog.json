@@ -1,10 +1,22 @@
-
 {
-    "id":"Dog",
-    "name":"狗",
-    "cost":1,
-    "def_atk":1,
-    "def_hp":2,
-    "img_path":"img/Dog.jpg"
+    "id": "Dog",
+    "name": "狗",
+    "cost": "1",
+    "def_atk": "1",
+    "def_hp": "2",
+    "img_path": "img/Dog.jpg",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "一只普通的小狗",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
 }
-

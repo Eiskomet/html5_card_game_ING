@@ -1,0 +1,22 @@
+{
+    "id": "AbstractDog",
+    "name": "抽象狗",
+    "cost": "4",
+    "def_atk": "5",
+    "def_hp": "1",
+    "img_path": "img/AbstractDog.jpg",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "有人说它长得像护理",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

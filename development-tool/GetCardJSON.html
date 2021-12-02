@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>卡牌制作</title>
+
+
+
+</head>
+
+<body>
+
+
+    <div>
+        <p id="show"></p>
+    </div>
+
+    <script>
+
+        var monster = {
+            "id": "Dog",                    //卡牌id
+            "name": "狗",                   //卡牌名
+            "cost": 1,                      //费用
+            "def_atk": 1,                   //攻击力
+            "def_hp": 2,                    //血量
+            "img_path": "img/Dog.jpg",      //图片路径
+            "type": "dog",                   //卡牌种类
+            "rarity": "普通",                //卡牌稀有度（普通，稀有，史诗，传说）
+            "text": "",                      //卡牌信息
+            "particular": "",                //详细信息  
+            "is_die": false,                //是否死亡
+            "is_leap_atk": false,           //是否飞跃攻击
+            "is_guard": false,              //是否守护
+            "is_unatk": false,             //是否无法攻击
+            "is_stealth": false,            //是否潜行
+            "useEffect": function () {      //卡牌使用效果
+
+            },
+            "atkEffect": function () {      //攻击效果
+
+            },
+            "roundEndEffect": function () { //回合结束效果
+
+            },
+            "roundStartEffect": function () {//回合开始效果
+
+            },
+            "deathEffect": function () {    //死亡效果
+
+            }
+        }
+        //函数可赋参数，第一个参数为友方角色，第二个参数为友方卡牌列表
+        //第三个参数为敌方角色，第四个参数为敌方卡牌列表
+
+        /*角色属性
+        limit_hp;       血量上限
+        hp;             当前血量
+        limit_coin;     费用上限
+        coin;           当前费用
+        library;        牌库
+        deck;           当前牌库
+        hands;          手牌
+ 
+        角色方法
+        drawCard()      抽卡
+        growth()        法力值成长
+        */
+
+        //怪物卡牌都有如上属性
+        //全局回合数为round_number
+        //卡槽数room_size
+        //所有卡牌数据card_data
+
+        var str = JSON.stringify(monster, (key, val) => {
+            if (typeof val == "function") {
+                return val.toString();
+            }
+            else {
+                return val;
+            }
+        })
+        document.getElementById("show").innerHTML = str;
+
+
+        // var obj=JSON.parse(str, (key, val) => {
+        //     if ("string" == typeof val && val.indexOf('function') == 0) {
+        //         return Function('return ' + val)();
+        //     }
+        //     else {
+        //         return val;
+        //     }
+        // });
+        // console.log(obj);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+    "id": "CruelDog",
+    "name": "残暴狗",
+    "cost": "3",
+    "def_atk": "2",
+    "def_hp": "6",
+    "img_path": "img/CruelDog.jpg",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "内有猛犬，禁止入内",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": true,
+    "is_unatk": true,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

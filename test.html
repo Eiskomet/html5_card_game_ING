@@ -3,19 +3,160 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/card.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
 
 
 </head>
 
 <body>
-    
 
-    <script>
- 
+    <div id="main">
+        <div id="garena">
+            <div id="en-hp" class="role-hp">
+                <p>17</p>
+            </div>
+            <div id="en-poss">
+                <div id="en-cs1" class="card-slot">
+                    <div class="card">
+                        <p class="cost">1</p><img class="card-img" src="img/Dog.jpg" draggable="false">
+                        <p class="name">狗</p>
+                        <p class="text">
+                        <p></p>
+                        </p>
+                        <div class="particular">一只普通的小狗</div>
+                        <span class="atk">1</span><span class="hp">4</span>
+                    </div>
+                </div>
+                <div id="en-cs2" class="card-slot"></div>
+                <div id="en-cs3" class="card-slot">
+                    <div class="card">
+                        <p class="cost">1</p><img class="card-img" src="img/Dog.jpg" draggable="false">
+                        <p class="name">狗</p>
+                        <p class="text">
+                        <p></p>
+                        </p>
+                        <div class="particular">一只普通的小狗</div><span class="atk">1</span><span class="hp">1</span>
+                    </div>
+                </div>
+                <div id="en-cs4" class="card-slot"></div>
+                <div id="en-cs5" class="card-slot"></div>
+                <div id="en-cs6" class="card-slot"></div>
+            </div>
 
-        
-     
-    </script>
+            <div id="fd-pos">
+                <div id="fd-cs1" class="card-slot" ondrop="UseCard(event)" ondragover="allowDrop(event)">
+                    <div class="card tale"><img class="card-img" src="img/NULL.png" draggable="false">
+                        <p class="name">test</p>
+                        <p class="text"><span class="able_tag">飞跃</span><span class="able_tag">守护</span><span
+                                class="able_tag">潜行</span>
+                        <p>测试用卡</p>
+                        </p>
+                        <div class="particular">用来测试卡牌系统的卡牌</div><span class="atk">1</span><span class="hp">1</span>
+                    </div>
+                </div>
+                <div id="fd-cs2" class="card-slot" ondrop="UseCard(event)" ondragover="allowDrop(event)">
+                    <div class="card">
+                        <p class="cost">1</p><img class="card-img" src="img/Dog.jpg" draggable="false">
+                        <p class="name">狗</p>
+                        <p class="text">
+                        <p></p>
+                        </p>
+                        <div class="particular">一只普通的小狗</div><span class="atk">1</span><span class="hp">2</span>
+                    </div>
+                </div>
+                <div id="fd-cs3" class="card-slot" ondrop="UseCard(event)" ondragover="allowDrop(event)">
+                    <div class="card">
+                        <p class="cost">1</p><img class="card-img" src="img/Dog.jpg" draggable="false">
+                        <p class="name">狗</p>
+                        <p class="text">
+                        <p></p>
+                        </p>
+                        <div class="particular">一只普通的小狗</div><span class="atk">1</span><span class="hp">2</span>
+                    </div>
+                </div>
+                <div id="fd-cs4" class="card-slot" ondrop="UseCard(event)" ondragover="allowDrop(event)">
+                    <div class="card">
+                        <p class="cost">1</p><img class="card-img" src="img/Dog.jpg" draggable="false">
+                        <p class="name">狗</p>
+                        <p class="text">
+                        <p></p>
+                        </p>
+                        <div class="particular">一只普通的小狗</div><span class="atk">1</span><span class="hp">2</span>
+                    </div>
+                </div>
+                <div id="fd-cs5" class="card-slot" ondrop="UseCard(event)" ondragover="allowDrop(event)">
+                </div>
+
+                <div id="fd-cs6" class="card-slot" ondrop="UseCard(event)" ondragover="allowDrop(event)"></div>
+
+            </div>
+            <div id="player-panel" class="py-pn">
+                <div id="fd-hp" class="role-hp">
+                    <p>20</p>
+                </div>
+                <input type="button" id="b-atk" class="b-atk" onclick="Attack(player,friendlys,npc,enemys);" value="攻击"
+                    disabled="">
+
+
+                <input type="button" id="n-round" class="n-round" onclick="NextRound(player,friendlys,npc,enemys)"
+                    value="下一回合">
+
+
+                <div id="p-coin" class="coin"><span class="num">(0/1)</span><span class="bar"></span></div>
+                <div id="p-deck" class="deck"><span>牌库：4</span></div>
+            </div>
+        </div>
+        <div id="hand">
+            <div class="card tale" draggable="true" id="hand-card0"><img class="card-img" src="img/NULL.png"
+                    draggable="false">
+                <p class="name">test</p>
+                <p class="text"><span class="able_tag">飞跃</span><span class="able_tag">守护</span><span
+                        class="able_tag">潜行</span>
+                <p>测试用卡</p>
+                </p>
+                <div class="particular">用来测试卡牌系统的卡牌</div><span class="atk">1</span><span class="hp">1</span>
+            </div>
+
+
+            <div class="card" draggable="true" id="hand-card1">
+                <p class="cost">3</p><img class="card-img" src="img/CruelDog.jpg" draggable="false">
+                <p class="name">残暴狗</p>
+                <p class="text"><span class="able_tag">守护</span><span class="able_tag">无法攻击</span>
+                <p></p>
+                </p>
+                <div class="particular">内有猛犬，禁止入内</div><span class="atk">2</span><span class="hp">6</span>
+            </div>
+            <div class="card" draggable="true" id="hand-card2">
+                <p class="cost">3</p><img class="card-img" src="img/DogKnights.png" draggable="false">
+                <p class="name">狗骑士</p>
+                <p class="text">
+                <p></p>
+                </p>
+                <div class="particular" style="display: none;"></div><span class="atk">2</span><span class="hp">4</span>
+            </div>
+            <div class="card" draggable="true" id="hand-card3">
+                <p class="cost">1</p><img class="card-img" src="img/Dog.jpg" draggable="false">
+                <p class="name">狗</p>
+                <p class="text">
+                <p></p>
+                </p>
+                <div class="particular">一只普通的小狗</div><span class="atk">1</span><span class="hp">2</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

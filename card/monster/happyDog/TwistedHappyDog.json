@@ -1,0 +1,22 @@
+{
+    "id": "TwistedHappyDog",
+    "name": "扭曲快乐狗",
+    "cost": "4",
+    "def_atk": "4",
+    "def_hp": "2",
+    "img_path": "img/TwistedHappyDog.jpg",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "它已经快乐到扭曲了！！",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

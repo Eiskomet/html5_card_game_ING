@@ -1,0 +1,22 @@
+{
+    "id": "MadDog",
+    "name": "疯狗",
+    "cost": "1",
+    "def_atk": "1",
+    "def_hp": "1",
+    "img_path": "img/MadDog.jpg",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "死亡后对敌方角色造成2点伤害",
+    "particular": "疯狗到死后都会咬你一口",
+    "is_die": false,
+    "is_leap_atk": false,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function(fd_character, fds, en_character){\n    en_character.hp-=2;\n}",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
+}

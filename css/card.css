@@ -1,0 +1,101 @@
+.card{
+    text-align: center;
+
+    background-color:#eeeeee;
+    width: var(--card-width);
+    height: var(--card-height);
+    border: 1px solid #cccccc;
+    position: relative;
+
+}
+
+.card span.hp{
+    margin: 0px 2px 0px 0px;
+    background-color:red;
+    color: aliceblue;
+    font-size: 17px;
+    padding:0px 5px;
+    float: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.card span.atk{
+    margin: 0px 0px 0px 2px;
+    background-color:blue;
+    color: aliceblue;
+    font-size: 17px;
+    padding:0px 5px;
+    float: left;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.card .name{
+    font-size: 15px;
+    background-color: #dddddd;
+    border-bottom:1px solid #cccccc;
+}
+.card img.card-img{
+    width: var(--card-width);
+    height: 110px;
+    display: flex;
+
+}
+
+.card p.cost{
+    right: 0;
+    color: #dddddd;
+    background-color:green;
+    padding: 0px 5px;
+    position: absolute;
+}
+
+.card .text{
+    font-size: 10px;
+    color: #bbbbbb;
+}
+
+.card .able_tag{
+    color: black;
+    font-weight:bolder;
+    margin: 1px;
+}
+.card .particular{
+    display: none;
+    border: 1px solid gray;
+    position: absolute;
+    left:  calc( var(--card-width) + 10px);
+    width: var(--card-width);
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    top: 0px;
+
+    
+    
+}
+.card:hover {
+    z-index: 3;
+}
+.card:hover .particular{
+    display: flex;
+    
+    
+}
+
+.rare:hover{
+    box-shadow: 0px 0px 20px 5px blue;
+  
+}
+.epic:hover{
+    box-shadow: 0px 0px 20px 5px purple;
+
+}
+.tale:hover{
+    box-shadow: 0px 0px 20px 5px gold;
+
+}
+

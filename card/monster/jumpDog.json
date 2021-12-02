@@ -1,9 +1,22 @@
 {
-    "id":"JumpDog",
-    "name":"跳跳狗",
-    "cost":2,
-    "def_atk":2,
-    "def_hp":1,
-    "img_path":"img/Jump-Dog.gif"
+    "id": "JumpDog",
+    "name": "跳跳狗",
+    "cost": "2",
+    "def_atk": "2",
+    "def_hp": "1",
+    "img_path": "img/JumpDog.gif",
+    "type": "狗",
+    "rarity": "普通",
+    "text": "",
+    "particular": "强悍的跳跃能力让它可以越过地方卡牌直接攻击敌方。",
+    "is_die": false,
+    "is_leap_atk": true,
+    "is_guard": false,
+    "is_unatk": false,
+    "is_stealth": false,
+    "useEffect": "function () { }",
+    "atkEffect": "function () { }",
+    "roundEndEffect": "function () { }",
+    "roundStartEffect": "function () { }",
+    "deathEffect": "function () { }"
 }
-
